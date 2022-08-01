@@ -1,17 +1,19 @@
-# This is a basic workflow that is manually triggered
+name: Cypress Tests using Cypress Docker Image
 
-name: Cypress test
 on: [push]
 
 jobs:
-  my_job:
-    name: deploy to staging
-    runs-on: ubuntu-18.04
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
-      - name: cyress test cases
-        uses: cypress-io/github-action@v2.9.7
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
         with:
-          start: npm start
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox
