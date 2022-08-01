@@ -14,4 +14,5 @@ jobs:
       - name: cyress test cases
         uses: cypress-io/github-action@v2.9.7
         with:
+          build: npm run build
           start: npm start
