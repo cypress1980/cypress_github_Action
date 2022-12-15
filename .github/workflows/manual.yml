@@ -3,10 +3,9 @@ name: Cypress Tests with Install Job and UI Chrome Job x 5
 on: [push]
 
 jobs:
-  ui-chrome-tests:
-    runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
-    needs: install
+  test:
+    name: Cypress run
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
