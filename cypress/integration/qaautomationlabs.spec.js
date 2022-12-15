@@ -8,7 +8,9 @@ describe("Open and  Serach in the site", () => {
     cy.get(".staticslider-button").click();
   });
   it("Verify Particular Blog ", () => {
-    cy.contains("How to Setup And Run Cypress Test Cases in Google Cloud?");
+    cy.contains(
+      "Running End-to-End Cypress Test cases In Google Cloud Build Pipeline"
+    );
   });
   it("Click on Blogs", () => {
     cy.contains("Blog").scrollIntoView().click({ force: true });
