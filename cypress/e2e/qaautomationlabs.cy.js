@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Dashboard", { testIsolation: false }, () => {
+describe("Dashboard", () => {
   it("Open URL", () => {
     cy.visit("https://qaautomationlabs.com/");
   });
