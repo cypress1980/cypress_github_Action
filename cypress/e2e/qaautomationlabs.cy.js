@@ -15,7 +15,7 @@ describe("Dashboard", { testIsolation: false }, () => {
   it("Click on Blogs", () => {
     cy.contains("Blog").scrollIntoView().click({ force: true });
   });
-  it("Search the data", () => {
+  it("Search the datas", () => {
     cy.get('[id="wp-block-search__input-2"]').scrollIntoView();
     cy.get('[id="wp-block-search__input-2"]')
       .click({ force: true })
