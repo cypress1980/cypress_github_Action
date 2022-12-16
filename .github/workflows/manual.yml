@@ -1,10 +1,10 @@
-name: Run QAAutomationLabs.com Parallel Cypress Tests
+name: QAAutomationLabs.com Parallel Cypress Tests
 
 on: [push]
 
 jobs:
   test:
-    name: Run QAAutomationLabs.com Test Cases
+    name: Cypress Cloud Tests
     runs-on: ubuntu-latest
     container: cypress/browsers:node18.12.0-chrome107
     strategy:
@@ -22,7 +22,7 @@ jobs:
 
       # because of "record" and "parallel" parameters
       # these containers will load balance all found tests among themselves
-      - name: Run QAAutomationLabs.com Test Cases
+      - name: QAAutomationLabs.com Tests
         uses: cypress-io/github-action@v4
         with:
           record: true
