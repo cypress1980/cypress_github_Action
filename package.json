@@ -1,5 +1,5 @@
 {
-  "name": "cypress_github_action",
+  "name": "cypress_12.2.0",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.1.0"
+    "cypress": "^12.2.0"
   }
 }
